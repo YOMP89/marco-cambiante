@@ -1,6 +1,6 @@
 # Marco Cambiante - Proyecto Web
 
-![Ejemplo del marco cambiante]()
+![Pantallazo del proyecto](capturaPantalla.jpg)
 
 Una aplicación web simple que muestra una imagen con un marco que cambia de color abruptamente cada 2 segundos.
 
