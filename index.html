@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Cambiante</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .marco {
+            padding: 20px;
+            border: 15px solid red; /* Color inicial */
+            background-color: white;
+        }
+
+        img {
+            display: block;
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="marco">
+        <img src="https://picsum.photos/400/300" alt="Imagen aleatoria">
+    </div>
+
+    <script>
+        const colores = [
+            '#ff0000', // Rojo
+            '#00ff00', // Verde
+            '#0000ff', // Azul
+            '#ffff00', // Amarillo
+            '#ff00ff', // Magenta
+            '#00ffff', // Cian
+            '#ffa500', // Naranja
+            '#800080'  // Púrpura
+        ];
+
+        const marco = document.querySelector('.marco');
+        let colorIndex = 0;
+
+        function cambiarColorMarco() {
+            marco.style.borderColor = colores[colorIndex];
+            colorIndex = (colorIndex + 1) % colores.length;
+        }
+
+        // Cambiar color inmediatamente al cargar
+        cambiarColorMarco();
+        
+        // Establecer intervalo de cambio cada 2 segundos
+        setInterval(cambiarColorMarco, 2000);
+    </script>
+</body>
+</html>
